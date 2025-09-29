@@ -18,6 +18,14 @@ const projects = [
     viewLink: "https://reactjsecomer.netlify.app",
     githubLink: "https://github.com/masumaakhi/reactjs.e-com",
   },  
+   {
+    image: assets.p7,
+    title: "Online Course Module System",
+    description: "Full-stack authentication system, two Way of Payment Getway, CRUD Module.",
+    tasks: ["HTML", "CSS", "JavaScript", "Reactjs", "Tailwindcss", "Express.js", "Node.js"],
+    viewLink: "https://online-course-module-front.netlify.app",
+    githubLink: "https://github.com/masumaakhi/Online-Course-Module-System",
+  },
   {
     image: assets.p3,
     title: "Authentication System",

@@ -10,6 +10,7 @@ import p3 from './p3.jpg'
 import p4 from './p4.jpg'
 import p5 from './p5.jpg'
 import p6 from './p6.jpg'
+import p7 from './p7.jpg'
 import logo from './logo.png'
 import logo3 from './logo3.png'
 // import myPortfolio from './myPortfolio.pdf'
@@ -24,6 +25,7 @@ export const assets = {
     p4,
     p5,
     p6,
+    p7,
     logo,
     logo3
 }

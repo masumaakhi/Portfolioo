@@ -193,3 +193,4 @@ Your Next.js portfolio has been optimized for:
 
 The optimizations ensure your portfolio will load quickly, rank well in search engines, and provide an excellent user experience across all devices.
 
+
