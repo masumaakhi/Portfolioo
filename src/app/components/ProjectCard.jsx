@@ -7,19 +7,19 @@ const ProjectCard = ({ image, title, description, tasks, viewLink, githubLink })
     <div className="card group relative bg-slate-800 text-white overflow-hidden shadow-lg hover:shadow-xl w-full max-w-sm">
       
       {/* 🖼️ Image Section */}
-      <div className="w-full h-[570px] relative">
-        <Image
-          src={image}
-          alt={`${title} - Project Screenshot`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover object-center border-b-2 border-slate-700"
-          quality={85}
-          loading="lazy"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-        />
-      </div>
+    <div className="w-full h-[570px] relative bg-slate-900">
+  <Image
+    src={image}
+    alt={`${title} - Project Screenshot`}
+    fill
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    className="object-contain object-center"  // 👈 cover → contain
+    quality={85}
+    loading="lazy"
+    placeholder="blur"
+    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+  />
+</div>
 
       {/* Overlay Content */}
       <div className="card__overlay">
