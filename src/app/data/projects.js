@@ -47,16 +47,16 @@ const projects = [
     title: "E-Commerce Website",
     description: "A food recipe app where users can browse, search, and submit recipes.",
     tasks: ["React", "Firebase", "HTML", "CSS", "TailwindCSS"],
-    viewLink: "https://your-ecommerce.com",
-    githubLink: "https://github.com/your-username/ecommerce",
+    viewLink: "https://voluble-truffle-581de8.netlify.app",
+    githubLink: "https://github.com/masumaakhi/ecommerce",
   },
   {
     image: assets.p2,
     title: "Portfolio Website",
     description: "Personal portfolio showcasing my skills, projects and contact info.",
     tasks: ["Next.js", "TailwindCSS", "Responsive Design"],
-    viewLink: "https://your-portfolio.com",
-    githubLink: "https://github.com/your-username/portfolio",
+    viewLink: "https://leafy-stardust-a07834.netlify.app",
+    githubLink: "https://github.com/masumaakhi/portfolio",
   },
 
 ];
