@@ -27,10 +27,10 @@ const Footer = () => {
         {/* Nav Links */}
         <ul className="flex justify-center flex-wrap gap-6 text-md font-medium">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/tech">Tech Stack</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#tech">Tech Stack</a></li>
           <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact me</a></li>
+          <li><a href="/#contact">Contact me</a></li>
         </ul>
 
         {/* Social Icons */}
@@ -104,7 +104,7 @@ const Footer = () => {
         <div className="h-px bg-gray-600 w-full mt-6" />
 
         <p className="text-sm text-gray-400 pt-2">
-          © 2025 All rights reserved. Designed by <span className="text-white font-semibold">@masuma</span>
+          © {new Date().getFullYear()} All rights reserved. Designed by <span className="text-white font-semibold">Masuma</span>
         </p>
       </div>
     </footer>

@@ -37,8 +37,8 @@ const Header = () => {
             </span>
           </h1>
 
-          <h2 className="text-2xl md:text-4xl lg:text-5xl">
-            Web Developer
+          <h2 className="text-2xl md:text-4xl lg:text-[45px]">
+            Full-Stack Web Developer
           </h2>
 
           <p className="text-base space-y-7 md:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0">
@@ -47,12 +47,12 @@ const Header = () => {
             uplift those who need it most.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4 items-center sm:items-start">
             <a
               href="https://wa.me/8801571300265?text=Hello%2C%20I%20want%20to%20contact%20you"
               target="_blank"
               rel="noopener noreferrer"
-              className="HeaderContactbutton px-4 py-2 rounded-[24px] text-md bg-[#25D366] hover:bg-[#128C7E] text-white transition text-center"
+              className="HeaderContactbutton w-48 py-3 rounded-[24px] text-md bg-[#25D366] hover:bg-[#128C7E] text-white transition flex justify-center items-center"
             >
               Chat Now
             </a>
@@ -60,7 +60,7 @@ const Header = () => {
               href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-              className="HeaderContactbutton px-4 py-2 rounded-[24px] text-md border border-[#38BDF8] text-[#38BDF8] hover:bg-[#38BDF8] hover:text-white transition text-center"
+              className="HeaderContactbutton w-48 py-3 rounded-[24px] text-md border border-[#38BDF8] text-[#38BDF8] hover:bg-[#38BDF8] hover:text-white transition flex justify-center items-center"
             >
               View Resume
             </a>
@@ -69,7 +69,7 @@ const Header = () => {
 
         {/* === Image Section === */}
         <div className="flex justify-center lg:justify-end">
-          <div className="imagaphoto relative w-70 h-70 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-[#1c2739] hover:bg-[#334155] border-2 border-[#38BDF8]">
+          <div className="imagaphoto relative w-[280px] h-[280px] md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-[#1c2739] hover:bg-[#334155] border-2 border-[#38BDF8]">
             <Image
               src={assets.photo}
               alt="Masuma Akter Akhi - Frontend Developer and Web Developer"

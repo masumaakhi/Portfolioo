@@ -10,11 +10,11 @@ const Nav = () => {
   const [hovered, setHovered] = useState(null); // 👈 track hover
 
   const navItems = [
-    { label: "Home", section: "/" },
-    { label: "About", section: "about" },
-    { label: "Tech Stack", section: "tech" },
-    { label: "Projects", section: "projects" },
-    { label: "Contact", section: "contact" },
+    { label: "Home", path: "/" },
+    { label: "About", path: "/#about" },
+    { label: "Tech Stack", path: "/#tech" },
+    { label: "Projects", path: "/projects" },
+    { label: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -40,12 +40,12 @@ const Nav = () => {
 
             return (
               <li
-                key={item.section}
+                key={item.label}
                 onMouseEnter={() => setHovered(item.label)}
                 onMouseLeave={() => setHovered(null)}
               >
                 <Link
-                  href={`#${item.section}`}
+                  href={item.path}
                   className={`transition-all ${textColor}`}
                 >
                   {item.label}
@@ -67,11 +67,11 @@ const Nav = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden mt-4 flex flex-col space-y-4 px-4 text-[1.2rem]">
+        <ul className="md:hidden mt-4 pb-6 flex flex-col space-y-4 px-4 text-[1.2rem]">
           {navItems.map((item) => (
-            <li key={item.section}>
-              <a
-                href={`#${item.section}`}
+            <li key={item.label}>
+              <Link
+                href={item.path}
                 onClick={() => setMenuOpen(false)}
                 className={`transition-all ${
                   item.label === "Home"
@@ -80,7 +80,7 @@ const Nav = () => {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

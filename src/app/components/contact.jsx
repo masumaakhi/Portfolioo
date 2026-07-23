@@ -78,13 +78,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center px-6 py-6">
+    <section className="bg-slate-900 text-white flex flex-col items-center justify-center px-6 py-12 md:py-20">
       <h2 className="text-4xl font-bold text-center mb-4">Contact Me</h2>
       <p className="text-center text-gray-300 max-w-xl mb-10">
         If you would like to contact me, please fill out the form below and I will get back to you as soon as possible.
       </p>
 
-      <form className="w-full max-w-md space-y-4" onSubmit={handleSubmit}>
+      <form className="w-full max-w-2xl space-y-6" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -92,7 +92,7 @@ const Contact = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-6 py-3 bg-slate-700 text-white rounded-md focus:ring-2 focus:ring-white"
+          className="w-full px-6 py-4 bg-slate-800 border border-slate-700 text-white placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
         />
 
         <input
@@ -102,27 +102,29 @@ const Contact = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-6 py-3 bg-slate-700 text-white rounded-md focus:ring-2 focus:ring-white"
+          className="w-full px-6 py-4 bg-slate-800 border border-slate-700 text-white placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
         />
 
         <textarea
           name="message"
-          rows="5"
+          rows="6"
           placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full px-6 py-3 bg-slate-700 text-white rounded-md focus:ring-2 focus:ring-white resize-none"
+          className="w-full px-6 py-4 bg-slate-800 border border-slate-700 text-white placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none transition-all"
         ></textarea>
 
-        <button
-          type="submit"
-          className="contact-button bg-white text-black font-semibold px-6 py-2 mr-4 rounded-md hover:bg-gray-200 transition"
-        >
-          Submit
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="bg-cyan-500 text-white font-bold px-10 py-3 rounded-lg hover:bg-cyan-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+          >
+            Submit
+          </button>
+        </div>
 
-        {status && <p className="text-center text-md text-gray-400">{status}</p>}
+        {status && <p className="text-center text-md text-gray-400 mt-4">{status}</p>}
       </form>
     </section>
   );

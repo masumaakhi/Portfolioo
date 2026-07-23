@@ -13,6 +13,8 @@ import p6 from './p6.jpg'
 import p7 from './p7.jpg'
 import logo from './logo.png'
 import logo3 from './logo3.png'
+import mohul from './mohul.jpg'
+import lifeos from './lifeos.jpg'
 // import myPortfolio from './myPortfolio.pdf'
 export const assets = {
     logo1,
@@ -27,5 +29,7 @@ export const assets = {
     p6,
     p7,
     logo,
-    logo3
+    logo3,
+    mohul,
+    lifeos
 }
