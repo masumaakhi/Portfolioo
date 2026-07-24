@@ -1,17 +1,22 @@
 export const metadata = {
-  metadataBase: new URL("https://masuma-portfolio-website.netlify.app"), // ✅ Replace with actual deployed domain
+  metadataBase: new URL("https://masumaakhi.vercel.app"),
   title: {
-    default: "Masuma Akter Akhi - Frontend Developer & Web Developer",
+    default: "Masuma Akter Akhi - Full-stack Web Developer",
     template: "%s | Masuma Akter Akhi"
   },
-  description: "Experienced Frontend Developer specializing in React, Next.js, and modern web technologies. Creating responsive, user-centric web applications with a focus on performance and accessibility.",
+  description: "Full-stack Web Developer specializing in JavaScript, TypeScript, Next.js, React.js, Express.js, NestJS, PostgreSQL, MySQL, and MongoDB. Building scalable, performant, and user-centric web applications.",
   keywords: [
-    "Frontend Developer",
-    "React Developer", 
-    "Next.js Developer",
+    "Full-stack Developer",
     "Web Developer",
     "JavaScript Developer",
-    "UI/UX Developer",
+    "TypeScript Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Express.js Developer",
+    "NestJS Developer",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
     "MERN Stack Developer",
     "Portfolio",
     "Masuma Akter Akhi"
@@ -33,23 +38,23 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://masuma-portfolio-website.netlify.app',
-    title: 'Masuma Akter Akhi - Frontend Developer & Web Developer',
-    description: 'Experienced Frontend Developer specializing in React, Next.js, and modern web technologies. Creating responsive, user-centric web applications.',
+    url: 'https://masumaakhi.vercel.app',
+    title: 'Masuma Akter Akhi - Full-stack Web Developer',
+    description: 'Full-stack Web Developer specializing in JavaScript, TypeScript, Next.js, React.js, Express.js, NestJS, PostgreSQL, MySQL, and MongoDB.',
     siteName: 'Masuma Akter Akhi Portfolio',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Masuma Akter Akhi - Frontend Developer',
+        alt: 'Masuma Akter Akhi - Full-stack Web Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Masuma Akter Akhi - Frontend Developer & Web Developer',
-    description: 'Experienced Frontend Developer specializing in React, Next.js, and modern web technologies.',
+    title: 'Masuma Akter Akhi - Full-stack Web Developer',
+    description: 'Full-stack Web Developer specializing in JavaScript, TypeScript, Next.js, React.js, Express.js, NestJS, PostgreSQL, MySQL, and MongoDB.',
     images: ['/og-image.jpg'],
     creator: '@Masumaakhi',
   },
@@ -67,9 +72,10 @@ export const metadata = {
   },
   manifest: '/site.webmanifest',
   verification: {
-    google: 'your-google-verification-code',
+    google: 'OJL-XPo9s0hWGePNe1GlC-bqd2TWA5D8IUtjGWl1rDQ',
   },
 };
+
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";

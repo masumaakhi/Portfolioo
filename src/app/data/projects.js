@@ -2,7 +2,7 @@
 import { assets } from "../assets/assets";
 
 const projects = [
-      {
+  {
     image: assets.mohul,
     title: "Mohul Online Shop",
     description: "A ecommerce website where users can browse, search, and submit recipes.",
@@ -10,31 +10,32 @@ const projects = [
     viewLink: "https://mohulofficial.com/",
     githubLink: "https://github.com/masumaakhi/",
   },
-      {
+  {
     image: assets.p4,
-    title: "Food Recipe Website",
-    description: "A food recipe app where users can browse, search, and submit recipes.",
-    tasks: ["Nextjs", "MongoDb", "HTML", "CSS", "TailwindCSS", "JavaScript"],
-    viewLink: "https://nextjsrecipes.netlify.app",
-    githubLink: "https://github.com/masumaakhi/nextjsrecipes",
-  },
-    {
-    image: assets.lifeos,
     title: "LifeOS - Online Course Platform",
     description: "A comprehensive learning management system where users can browse various educational modules, enroll in courses, and seamlessly track their learning progress.",
     tasks: ["Nextjs", "MongoDb", "HTML", "CSS", "TailwindCSS", "JavaScript"],
     viewLink: "https://nextjsrecipes.netlify.app",
     githubLink: "https://github.com/masumaakhi/nextjsrecipes",
+
   },
-   {
+  {
+    image: assets.lifeos,
+    title: "LifeOS - Personal Productivity & Study Management Platform",
+    description: "A modern full-stack productivity platform that helps users manage tasks, study schedules, habits, budgets, and personal goals from a single dashboard.",
+    tasks: ["Nextjs", "MongoDb", "TypeScript", "TailwindCSS"],
+    viewLink: "https://lifeos-seja.vercel.app",
+    githubLink: "https://github.com/masumaakhi",
+  },
+  {
     image: assets.p5,
     title: "E-Commerce Shop Website",
     description: "Responsive e-commerce app with product listing, cart, and secure checkout optimized for speed.",
     tasks: ["Reactjs", "TailwindCSS", "Firebase", "JavaScript"],
     viewLink: "https://reactjsecomer.netlify.app",
     githubLink: "https://github.com/masumaakhi/reactjs.e-com",
-  },  
-   {
+  },
+  {
     image: assets.p7,
     title: "Online Course Module System",
     description: "Full-stack authentication system, two Way of Payment Getway, CRUD Module.",
@@ -50,7 +51,7 @@ const projects = [
     viewLink: "https://gleeful-dasik-8674b2.netlify.app",
     githubLink: "https://github.com/masumaakhi/mern-authenticate",
   },
-   {
+  {
     image: assets.p6,
     title: "Foodie Website",
     description: "A food recipe app where users can browse, search, and submit recipes.",
