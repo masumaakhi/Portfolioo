@@ -12,8 +12,8 @@ const projects = [
   },
   {
     image: assets.p4,
-    title: "LifeOS - Online Course Platform",
-    description: "A comprehensive learning management system where users can browse various educational modules, enroll in courses, and seamlessly track their learning progress.",
+    title: "Fusion - Recipe Website",
+    description: "A comprehensive recipes website where users can browse various recipes and find the best recipes for cooking.",
     tasks: ["Nextjs", "MongoDb", "HTML", "CSS", "TailwindCSS", "JavaScript"],
     viewLink: "https://nextjsrecipes.netlify.app",
     githubLink: "https://github.com/masumaakhi/nextjsrecipes",

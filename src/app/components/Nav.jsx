@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { assets } from "../assets/assets";
 import Image from "next/image";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hovered, setHovered] = useState(null); // 👈 track hover
+  const [hovered, setHovered] = useState(null);
+  const pathname = usePathname();
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -17,12 +19,33 @@ const Nav = () => {
     { label: "Contact", path: "/#contact" },
   ];
 
+  const handleClick = (e, item) => {
+    // hash link হলে
+    if (item.path.startsWith("/#")) {
+      const sectionId = item.path.replace("/#", "");
+
+      if (pathname === "/") {
+        // home page এ আছি → smooth scroll করো
+        e.preventDefault();
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // অন্য page এ আছি → home এ navigate করে hash scroll হবে
+        e.preventDefault();
+        window.location.href = item.path;
+      }
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="bg-[#334155] text-white pt-2 fixed top-0 w-full z-50">
       <div className="max-w-[83rem] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-xl font-bold">
-          <Link href={"/"}><Image  src={assets.logo3} alt="logo" width={90} height={90} /></Link>
+          <Link href={"/"}><Image src={assets.logo3} alt="logo" width={90} height={90} /></Link>
         </div>
 
         {/* Desktop Menu */}
@@ -47,6 +70,7 @@ const Nav = () => {
                 <Link
                   href={item.path}
                   className={`transition-all ${textColor}`}
+                  onClick={(e) => handleClick(e, item)}
                 >
                   {item.label}
                 </Link>
@@ -72,7 +96,7 @@ const Nav = () => {
             <li key={item.label}>
               <Link
                 href={item.path}
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleClick(e, item)}
                 className={`transition-all ${
                   item.label === "Home"
                     ? "text-[#38BDF8]"

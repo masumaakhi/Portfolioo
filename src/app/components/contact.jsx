@@ -78,7 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-slate-900 text-white flex flex-col items-center justify-center px-6 py-12 md:py-20">
+    <section id="contact" className="bg-slate-900 text-white flex flex-col items-center justify-center px-6 py-12 md:py-20">
       <h2 className="text-4xl font-bold text-center mb-4">Contact Me</h2>
       <p className="text-center text-gray-300 max-w-xl mb-10">
         If you would like to contact me, please fill out the form below and I will get back to you as soon as possible.
