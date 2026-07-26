@@ -14,6 +14,10 @@ const Projects = dynamic(() => import("./components/Projects"), {
   loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-lg" />,
 });
 
+const Research = dynamic(() => import("./components/Research"), {
+  loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-lg" />,
+});
+
 const Contact = dynamic(() => import("./components/contact"), {
   loading: () => <div className="h-96 bg-slate-800 animate-pulse rounded-lg" />,
 });
@@ -25,6 +29,7 @@ export default function Home() {
       <About />
       <Techstack />
       <Projects />
+      <Research />
       <Contact />
     </>
   );

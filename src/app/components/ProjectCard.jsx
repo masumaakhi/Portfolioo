@@ -1,8 +1,9 @@
 //src/app/components/ProjectCard.jsx
 
 import Image from "next/image";
+import Link from "next/link";
 
-const ProjectCard = ({ image, title, description, tasks, viewLink, githubLink }) => {
+const ProjectCard = ({ slug, image, title, description, tasks, viewLink, githubLink }) => {
   return (
     <div className="card group relative bg-slate-800 text-white overflow-hidden shadow-lg hover:shadow-xl w-full max-w-sm">
       
@@ -29,12 +30,12 @@ const ProjectCard = ({ image, title, description, tasks, viewLink, githubLink })
             <h3 className="card__title text-xl font-bold mb-3">{title}</h3>
 
             {/* 🔗 Buttons Section */}
-            <div className="flex gap-3 items-center">
+            <div className="flex flex-wrap gap-2 items-center mt-2">
               <a
                 href={viewLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" viewlink bg-blue-600 text-white px-4 py-2 rounded-[24px] text-sm"
+                className=" viewlink bg-blue-600 text-white px-3 py-1.5 rounded-[24px] text-[13px] font-medium whitespace-nowrap"
               >
                 View Live
               </a>
@@ -42,10 +43,18 @@ const ProjectCard = ({ image, title, description, tasks, viewLink, githubLink })
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" gitlink bg-gray-700 text-white px-4 py-2 rounded-[24px] text-sm"
+                className=" gitlink bg-gray-700 text-white px-3 py-1.5 rounded-[24px] text-[13px] font-medium whitespace-nowrap"
               >
                 GitHub
               </a>
+              {slug && (
+                <Link
+                  href={`/projects/${slug}`}
+                  className="bg-transparent border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-3 py-1.5 rounded-[24px] text-[13px] font-medium whitespace-nowrap transition-all"
+                >
+                  Details View
+                </Link>
+              )}
             </div>
           </div>
         </div>

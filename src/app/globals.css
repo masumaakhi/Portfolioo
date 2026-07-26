@@ -169,12 +169,7 @@ body {
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  /* color: #D7BDCA; */
   font-family: "MockFlowFont";
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
 }
 
 .viewlink {
@@ -409,12 +404,7 @@ body {
   .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    /* color: #D7BDCA; */
     font-family: "MockFlowFont";
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
   }
 
   .viewlink {
@@ -648,12 +638,7 @@ body {
   .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    /* color: #D7BDCA; */
     font-family: "MockFlowFont";
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
   }
 
   .viewlink {

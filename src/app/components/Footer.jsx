@@ -17,93 +17,47 @@ const Footer = () => {
     setMounted(true);
   }, []);
   return (
-    <footer id="footer" className="bg-slate-800 text-white py-10 px-4">
-      <div className="max-w-6xl mx-auto text-center space-y-10">
-        {/* Logo */}
-        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600">
-          LOGO
-        </h2>
-
-        {/* Nav Links */}
-        <ul className="flex justify-center flex-wrap gap-6 text-md font-medium">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#tech">Tech Stack</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/#contact">Contact me</a></li>
-        </ul>
-
+    <footer id="footer" className="bg-slate-800 text-white pt-6 pb-2">
+      <div className="max-w-5xl mx-auto text-center px-6">
+        
         {/* Social Icons */}
         {mounted && (
-          <div className="social-icons flex justify-center gap-6 text-xl">
-            <a
-              href="https://www.linkedin.com/in/masuma-akter-akhi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
+          <div className="social-icons flex justify-center gap-6 text-xl mb-6">
+            <a href="https://www.linkedin.com/in/masuma-akter-akhi/" target="_blank" rel="noopener noreferrer" className="icons hover:text-[#38BDF8] transition-colors">
               <FaLinkedinIn />
             </a>
-            <a
-              href="https://www.facebook.com/masuma.akhii"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
+            <a href="https://www.facebook.com/masuma.akhii" target="_blank" rel="noopener noreferrer" className="icons hover:text-[#38BDF8] transition-colors">
               <FaFacebook />
             </a>
-            <a
-              href="https://github.com/masumaakhi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
+            <a href="https://github.com/masumaakhi" target="_blank" rel="noopener noreferrer" className="icons hover:text-[#38BDF8] transition-colors">
               <FaGithub />
             </a>
-            <a
-              href="https://x.com/Masumaakhi12"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
+            <a href="https://x.com/Masumaakhi12" target="_blank" rel="noopener noreferrer" className="icons hover:text-[#38BDF8] transition-colors">
               <FaTwitter />
             </a>
-            {/* <a
-              href="https://youtu.be/tKyYwDWzrHc?feature=shared"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
-              <FaYoutube />
-            </a> */}
-            {/* Optional Instagram */}
-            <a
-              href="https://www.instagram.com/masuma.akhii/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icons"
-            >
+            <a href="https://www.instagram.com/masuma.akhii/" target="_blank" rel="noopener noreferrer" className="icons hover:text-[#38BDF8] transition-colors">
               <FaInstagram />
             </a>
           </div>
         )}
 
         {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-md">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm md:text-base mb-8">
           <div className="flex items-center gap-2">
-            <FaEnvelope />
+            <FaEnvelope className="text-white" />
             <span>masumaakterakhi90@gmail.com</span>
           </div>
           <div className="flex items-center gap-2">
-            <FaPhoneAlt />
+            <FaPhoneAlt className="text-white" />
             <span>+8801571300265</span>
           </div>
         </div>
 
-        {/* Divider & Credits */}
-        <div className="h-px bg-gray-600 w-full mt-6" />
+        {/* Divider */}
+        <div className="h-px bg-slate-600/50 w-full mb-6" />
 
-        <p className="text-sm text-gray-400 pt-2">
+        {/* Credits */}
+        <p className="text-sm text-gray-400 pb-4">
           © {new Date().getFullYear()} All rights reserved. Designed by <span className="text-white font-semibold">Masuma</span>
         </p>
       </div>

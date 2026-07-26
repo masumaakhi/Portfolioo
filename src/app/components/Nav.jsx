@@ -6,38 +6,28 @@ import { Menu, X } from "lucide-react";
 import { assets } from "../assets/assets";
 import Image from "next/image";
 
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Tech Stack", path: "/#tech" },
+  { label: "Projects", path: "/projects" },
+  { label: "Research", path: "/#research" },
+  { label: "Contact", path: "/#contact" },
+];
+
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
   const pathname = usePathname();
 
-  const navItems = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/#about" },
-    { label: "Tech Stack", path: "/#tech" },
-    { label: "Projects", path: "/projects" },
-    { label: "Contact", path: "/#contact" },
-  ];
-
-  const handleClick = (e, item) => {
-    // hash link হলে
-    if (item.path.startsWith("/#")) {
-      const sectionId = item.path.replace("/#", "");
-
-      if (pathname === "/") {
-        // home page এ আছি → smooth scroll করো
-        e.preventDefault();
-        const el = document.getElementById(sectionId);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      } else {
-        // অন্য page এ আছি → home এ navigate করে hash scroll হবে
-        e.preventDefault();
-        window.location.href = item.path;
-      }
-    }
-    setMenuOpen(false);
+  const getTextColor = (label) => {
+    if (hovered === label) return "text-[#38BDF8]";
+    if (hovered) return "text-white";
+    const isActive =
+      (label === "Home" && pathname === "/") ||
+      (label === "About" && pathname === "/about") ||
+      (label === "Projects" && pathname === "/projects");
+    return isActive ? "text-[#38BDF8]" : "text-white";
   };
 
   return (
@@ -45,38 +35,28 @@ const Nav = () => {
       <div className="max-w-[83rem] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-xl font-bold">
-          <Link href={"/"}><Image src={assets.logo3} alt="logo" width={90} height={90} /></Link>
+          <Link href="/">
+            <Image src={assets.logo3} alt="logo" width={90} height={90} />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:mr-[3rem] lg:mr-0 items-center space-x-[3rem] text-[1.2rem] ps-10">
-          {navItems.map((item) => {
-            const isHovered = hovered === item.label;
-            const textColor =
-              isHovered
-                ? "text-[#38BDF8]"
-                : hovered
-                ? "text-white"
-                : item.label === "Home"
-                ? "text-[#38BDF8]"
-                : "text-white";
-
-            return (
-              <li
-                key={item.label}
-                onMouseEnter={() => setHovered(item.label)}
-                onMouseLeave={() => setHovered(null)}
+          {navItems.map((item) => (
+            <li
+              key={item.label}
+              onMouseEnter={() => setHovered(item.label)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <Link
+                href={item.path}
+                className={`transition-all ${getTextColor(item.label)}`}
+                onClick={() => setMenuOpen(false)}
               >
-                <Link
-                  href={item.path}
-                  className={`transition-all ${textColor}`}
-                  onClick={(e) => handleClick(e, item)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Icon */}
@@ -96,12 +76,10 @@ const Nav = () => {
             <li key={item.label}>
               <Link
                 href={item.path}
-                onClick={(e) => handleClick(e, item)}
                 className={`transition-all ${
-                  item.label === "Home"
-                    ? "text-[#38BDF8]"
-                    : "hover:text-[#38BDF8]"
+                  getTextColor(item.label) === "text-[#38BDF8]" ? "text-[#38BDF8]" : "hover:text-[#38BDF8]"
                 }`}
+                onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </Link>
